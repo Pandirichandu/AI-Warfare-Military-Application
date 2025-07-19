@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-navy-900 text-gray-100 font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-accent-teal text-white hover:bg-opacity-90 focus:ring-accent-teal;
+  }
+  
+  .btn-danger {
+    @apply bg-accent-red text-white hover:bg-opacity-90 focus:ring-accent-red;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-accent-teal text-accent-teal hover:bg-accent-teal hover:bg-opacity-10;
+  }
+  
+  .card {
+    @apply bg-navy-800 rounded-lg p-6 shadow-lg border border-gray-700;
+  }
+  
+  .stat-card {
+    @apply card transition-transform duration-300 hover:translate-y-[-5px];
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold mb-6 text-white;
+  }
+  
+  .subsection-title {
+    @apply text-xl font-semibold mb-4 text-white;
+  }
+  
+  .radar-ping {
+    @apply absolute w-full h-full rounded-full bg-accent-teal opacity-0 animate-radar;
+  }
+  
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(18, 34, 64, 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(18, 34, 64, 0.6) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
